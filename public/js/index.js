@@ -33,7 +33,6 @@ if (userDataForm)
     form.append('name', document.getElementById('name').value);
     form.append('email', document.getElementById('email').value);
     form.append('photo', document.getElementById('photo').file[0]);
-    console.log(form);
     updateSettings(form, 'data');
   });
 

@@ -38,7 +38,7 @@ app.use(cors());
 
 app.options('*', cors());
 
-app.options('/api/v1/tours/:id', cors());
+// app.options('/api/v1/tours/:id', cors());
 
 // GLOBAL MIDDLEWARES
 // Set security HTTP headers

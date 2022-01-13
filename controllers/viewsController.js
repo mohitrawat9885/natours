@@ -53,7 +53,7 @@ exports.getMyTours = catchAsync(async (req, res, next) => {
 
   // 2) Find tours with the returned IDs
   const tourIDs = bookings.map(el => el.tour);
-  const tours = await Tours.find({ _id: { $in: tourIDs } });
+  const tours = await Tour.find({ _id: { $in: tourIDs } });
 
   res.status(200).render('overview', {
     title: 'My Tours',

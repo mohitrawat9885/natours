@@ -70,14 +70,14 @@ app.use(
   })
 );
 
-app.user(compression());
+app.use(compression());
 
 // Test Middleware
-app.use((req, res, next) => {
-  req.requestTime = new Date().toISOString();
-  console.log('Cookies', req.cookies);
-  next();
-});
+// app.use((req, res, next) => {
+//   req.requestTime = new Date().toISOString();
+//   console.log('Cookies', req.cookies);
+//   next();
+// });
 
 // 3) ROUTES
 app.use('/', viewRouter);
